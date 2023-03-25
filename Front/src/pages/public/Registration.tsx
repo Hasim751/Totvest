@@ -12,7 +12,7 @@ export default function Registration() {
   return (
     <>
       <Helmet>
-        <title> Components Overview | Minimal UI</title>
+        <title> Registration</title>
       </Helmet>
 
       <ComponentHero />

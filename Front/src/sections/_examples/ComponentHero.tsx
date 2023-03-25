@@ -48,7 +48,7 @@ export default function ComponentHero() {
         <Stack spacing={3}>
           <m.div variants={varFade().inUp}>
             <Typography variant="h3" component="h1">
-              Components
+              Registration
             </Typography>
           </m.div>
 

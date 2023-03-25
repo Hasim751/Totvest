@@ -53,7 +53,6 @@ export const RegisterForm = (props: Props) => {
     try {
       const res = await createUser(data);
       enqueueSnackbar(res.message, { variant: res.type });
-      await login(data.email, data.password);
       navigate('/dashboard/');
     } catch (error) {
       enqueueSnackbar(error.message, { variant: 'error' });
