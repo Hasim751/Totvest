@@ -34,7 +34,7 @@ export default function startupCard() {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          Invent Now
         </Button>
       </CardActions>
     </Card>
