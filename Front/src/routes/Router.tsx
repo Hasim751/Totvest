@@ -53,6 +53,15 @@ export default function Router() {
             </GuestGuard>
           ),
         },
+        
+        {
+          path: 'about',
+          element: (
+            <GuestGuard>
+              
+            </GuestGuard>
+          ),
+        },
         { path: 'login-unprotected', element: <LoginPage /> },
         { path: 'register-unprotected', element: <RegisterPage /> },
         {
