@@ -113,6 +113,7 @@ export default function Router() {
       children: [
         { element: <HomePage />, index: true },
         { element: <RegisterPage />, path:"register" },
+        { element: <AboutPage />, path:"about" },
         // Demo Components
       ],
     },
