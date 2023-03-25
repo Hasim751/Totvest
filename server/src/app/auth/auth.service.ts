@@ -25,17 +25,18 @@ export class AuthService {
   async register(dto: UserDto): Promise<Tokens> {
     try {
       const hash = await argon2.hash(dto.password);
-      const user = new UserEntity();
+      const user = new UserEntity()
+      user.userId = this.generateUserId();
       user.firstName = dto.firstName;
       user.lastName = dto.lastName;
+      user.mobile = dto.mobile;
       user.userType = dto.userType;
       user.email = dto.email;
       user.password = hash;
 
-      const res = await this._userService.create(user);
+      const res = await this._userRepository.save(user);
       const token = await this.getToken(res.id, res.email, res.firstName, res.userType);
 
-      const a = await this.setUser(dto, res.id.toString())
       await this.updateRt(res.id, token.refreshToken);
       return token;
     } catch (error) {
@@ -135,18 +136,4 @@ export class AuthService {
     await this._userRepository.save(user);
   }
 
-  async setUser(userDto: UserDto, tenantId: string) {
-    const queryRunner = this._userRepository.manager.connection.createQueryRunner()
-    await queryRunner.connect()
-    const user = new UserEntity();
-    user.userId = this.generateUserId();
-    user.firstName = userDto.firstName;
-    user.lastName = userDto.lastName;
-    user.mobile = userDto.mobile;
-    user.email = userDto.email;
-    user.address = userDto.address;
-    user.avatar = userDto.avatar;
-    await queryRunner.manager.save(UserEntity, user)
-    await queryRunner.release()
-  }
 }

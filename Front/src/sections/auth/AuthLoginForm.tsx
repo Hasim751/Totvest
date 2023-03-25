@@ -35,7 +35,7 @@ export default function AuthLoginForm() {
   });
 
   const defaultValues = {
-    email: 'demo@demo.com',
+    email: 'hamza@hasim751.com',
     password: '123456789',
   };
 

@@ -27,6 +27,7 @@ import {
   AddCustomer,
   CustomerList,
 } from './elements';
+import UserProfile from 'src/pages/user/UserProfile';
 
 // ----------------------------------------------------------------------
 
@@ -85,6 +86,13 @@ export default function Router() {
             { path: 'add', element: <AddCustomer /> },
           ],
         },
+        {
+          path: 'user',
+          children: [
+            { element: <Navigate to="/dashboard/user/profile" replace />, index: true },
+            { path: 'profile', element: <UserProfile /> },
+          ],
+        },
       ],
     },
 
@@ -96,7 +104,7 @@ export default function Router() {
         // Demo Components
       ],
     },
-    
+
     {
       element: <CompactLayout />,
       children: [

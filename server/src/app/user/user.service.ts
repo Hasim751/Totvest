@@ -39,7 +39,7 @@ export class UserService {
     user.lastName = userDto.lastName;
     user.address = userDto.address;
     user.avatar = userDto.avatar;
-
+    
     // const result = await this._userRepository.create(user);
     return this._userRepository.save(user);
   }

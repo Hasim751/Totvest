@@ -32,17 +32,16 @@ const ICONS = {
   analytics: icon('ic_analytics'),
   dashboard: icon('ic_dashboard'),
   customer: icon('ic_user'),
-
 };
 
-const navConfig  = [
+const navConfig = [
   // GENERAL
   // ----------------------------------------------------------------------
   {
     subheader: 'general',
     items: [
       { title: 'Blank', path: PATH_DASHBOARD.blank, icon: ICONS.blank },
-      { title: 'Add Product', path: PATH_DASHBOARD.product.add, icon: ICONS.blank },
+      { title: 'Profile', path: PATH_DASHBOARD.user.profile, icon: ICONS.user },
       {
         title: 'customer',
         path: PATH_DASHBOARD.customer.root,
@@ -50,7 +49,7 @@ const navConfig  = [
         children: [
           { title: 'Add', path: PATH_DASHBOARD.customer.add },
           { title: 'List', path: PATH_DASHBOARD.customer.list },
-        ]
+        ],
       },
     ],
   },

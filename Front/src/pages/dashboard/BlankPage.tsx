@@ -11,7 +11,7 @@ export default function BlankPage() {
   return (
     <>
       <Helmet>
-        <title> Blank Page | Minimal UI</title>
+        <title> Blank Page | TotVest</title>
       </Helmet>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

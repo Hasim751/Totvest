@@ -15,7 +15,7 @@ export default function Page500() {
   return (
     <>
       <Helmet>
-        <title> 500 Internal Server Error | Minimal UI</title>
+        <title> 500 Internal Server Error | TotVest</title>
       </Helmet>
 
       <MotionContainer>

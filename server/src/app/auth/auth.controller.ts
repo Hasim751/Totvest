@@ -1,6 +1,7 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Post, Req, Res, UseGuards } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Response } from 'express';
+import { getConnection } from 'typeorm';
 import { UserDto } from '../user/dto/user.dto';
 import { AuthService } from './auth.service';
 import { GetUser, Public } from './common/decorators';
@@ -31,8 +32,8 @@ export class AuthController {
       sameSite: 'strict',
       secure: true
     });
-    
-     return { status: true, "accessToken": token.accessToken }
+
+    return { status: true, "accessToken": token.accessToken }
   }
 
   @HttpCode(HttpStatus.OK)
@@ -56,6 +57,30 @@ export class AuthController {
       sameSite: 'strict',
       secure: true
     });
-    return {"accessToken": data.accessToken };
+    return { "accessToken": data.accessToken };
+  }
+
+
+  @Get('runMigration')
+  @Public()
+  async runMigration() {
+    try {
+      await getConnection().runMigrations();
+      return { status: true, message: "Migration Run successfully" }
+    } catch (error: any) {
+      return { status: false, message: error.message }
+    }
+  }
+
+  @Public()
+  @Get('revert')
+  async revert() {
+    try {
+      await getConnection().undoLastMigration()
+
+      return { status: true, message: "revert Run successfully" }
+    } catch (error: any) {
+      return { status: false, message: error.message }
+    }
   }
 }
