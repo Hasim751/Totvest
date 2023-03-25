@@ -25,6 +25,7 @@ import {
   Page404,
   HomePage,
   AddCustomer,
+  AddCampaign,
   CustomerList,
 } from './elements';
 import UserProfile from 'src/pages/user/UserProfile';
@@ -55,7 +56,7 @@ export default function Router() {
             </GuestGuard>
           ),
         },
-        
+
         {
           path: 'about',
           element: (
@@ -104,6 +105,13 @@ export default function Router() {
             { path: 'profile', element: <UserProfile /> },
           ],
         },
+        {
+          path: 'campaign',
+          children: [
+            { element: <Navigate to="/dashboard/campaign/list" replace />, index: true },
+            { path: 'add', element: <AddCampaign /> },
+          ],
+        },
       ],
     },
 
@@ -112,8 +120,8 @@ export default function Router() {
       element: <MainLayout />,
       children: [
         { element: <HomePage />, index: true },
-        { element: <RegisterPage />, path:"register" },
-        { element: <AboutPage />, path:"about" },
+        { element: <Registration />, path: 'register' },
+        { element: <AboutPage />, path: 'about' },
         // Demo Components
       ],
     },

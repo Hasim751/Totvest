@@ -3,7 +3,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 
 type RFHSelectTypes = {
   name: string;
-  defaultValue: string | number;
+  defaultValue?: string | number ;
   options: { value: string; name: string }[];
   label: string;
 };

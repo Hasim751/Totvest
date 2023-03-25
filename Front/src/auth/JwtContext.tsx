@@ -161,7 +161,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   // LOGOUT
   const logout = async () => {
-    await api.get('/auth/logout');
+    // await api.get('/auth/logout');
     setSession(null);
     dispatch({ type: Types.LOGOUT });
   };

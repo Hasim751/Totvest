@@ -15,7 +15,7 @@ export const RHFPhoneNumber: FC<Props> = ({ name, label }) => {
       control={control}
       render={({ field: { ...field }, fieldState: { error } }) => (
         <MuiPhoneNumber
-          defaultCountry={'in'}
+          defaultCountry={'ca'}
           {...field}
           variant="outlined"
           label={label}

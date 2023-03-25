@@ -41,4 +41,5 @@ export const AboutPage = Loadable(lazy(() => import('../pages/public/AboutPage')
 
 // ----------------------------------------------------------------------
 
+export const AddCampaign = Loadable(lazy(() => import('../pages/campaign/AddCampaign')))
 

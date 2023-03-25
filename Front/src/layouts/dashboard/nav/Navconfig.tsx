@@ -43,12 +43,12 @@ const navConfig = [
       { title: 'Blank', path: PATH_DASHBOARD.blank, icon: ICONS.blank },
       { title: 'Profile', path: PATH_DASHBOARD.user.profile, icon: ICONS.user },
       {
-        title: 'customer',
-        path: PATH_DASHBOARD.customer.root,
+        title: 'Campaign',
+        path: PATH_DASHBOARD.campaign.root,
         icon: ICONS.customer,
         children: [
-          { title: 'Add', path: PATH_DASHBOARD.customer.add },
-          { title: 'List', path: PATH_DASHBOARD.customer.list },
+          { title: 'Add', path: PATH_DASHBOARD.campaign.add },
+          { title: 'List', path: PATH_DASHBOARD.campaign.list },
         ],
       },
     ],
