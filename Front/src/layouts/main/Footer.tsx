@@ -30,8 +30,8 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'support@minimals.cc', href: '#' },
-      { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' },
+      { name: 'support@totvest.cc', href: '#' },
+      { name: '3525 AvonHurst Dr Regina SK Canada', href: '#' },
     ],
   },
 ];
@@ -59,7 +59,7 @@ export default function Footer() {
         <Typography variant="caption" component="div">
           © All rights reserved
           <br /> made by &nbsp;
-          <Link href="https://minimals.cc/"> minimals.cc </Link>
+          <Link href="https://totvest.cc/"> TotVest </Link>
         </Typography>
       </Container>
     </Box>

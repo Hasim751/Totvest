@@ -74,7 +74,6 @@ export default function HomePage() {
 
         <HomeCleanInterfaces />
  */}
-        <HomePricingPlans />
 
        
       </Box>
