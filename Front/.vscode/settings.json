@@ -1,0 +1,39 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#86a5ab",
+    "activityBar.background": "#86a5ab",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#845b7d",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#86a5ab",
+    "statusBar.background": "#688e96",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#537178",
+    "statusBarItem.remoteBackground": "#688e96",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#688e96",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#688e9699",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#688e96",
+  "cSpell.words": [
+    "akar",
+    "APPBAR",
+    "Cust",
+    "GSTIN",
+    "hookform",
+    "Iconify",
+    "lightbox",
+    "mapbox",
+    "mycomponents",
+    "nbps",
+    "notistack",
+    "persistor",
+    "simplebar",
+    "sweetalert",
+    "tanstack"
+  ]
+}
