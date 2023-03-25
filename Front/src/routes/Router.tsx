@@ -28,6 +28,7 @@ import {
   CustomerList,
 } from './elements';
 import UserProfile from 'src/pages/user/UserProfile';
+import Registration from 'src/pages/public/Registration';
 
 // ----------------------------------------------------------------------
 
@@ -49,7 +50,7 @@ export default function Router() {
           path: 'register',
           element: (
             <GuestGuard>
-              <RegisterPage />
+              <Registration />
             </GuestGuard>
           ),
         },
