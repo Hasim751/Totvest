@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 // @mui
 import { Box, Card, Grid, Stack } from '@mui/material';
 // components
-import { HookForm, RHFTextField } from '../../../components/hook-form';
+import { HookForm, RHFSelect, RHFTextField } from '../../../components/hook-form';
 import { CustForm, CustomerWithAddress } from '../../../@types/customer';
 import { ButtonAccordion } from '../../../mycomponents/common';
 import { AddressRow } from './AddressRow';
@@ -26,20 +26,14 @@ type Props = {
 };
 
 export default function CustomerForm({ isEdit, currentCustomer }: Props) {
-  const { defaultCustomer, createCustomer } = useCustomer();
+  const { createCustomer } = useCustomer();
   const navigate = useNavigate()
   const { enqueueSnackbar } = useSnackbar();
 
-  const defaultValues: CustForm = useMemo(
-    () => defaultCustomer(currentCustomer),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [currentCustomer]
-  );
 
   const BillingAddresses = useAddress([], 'Billing');
   const methods = useForm<CustForm>({
     resolver: yupResolver(NewCustomerSchema),
-    defaultValues,
   });
 
   const {
@@ -71,10 +65,9 @@ export default function CustomerForm({ isEdit, currentCustomer }: Props) {
         <Grid item xs={12} md={12}>
           <Card sx={{ p: 3 }}>
             <Box sx={boxGridSx}>
-              <RHFTextField name="customerName" label="Name" required />
+              <RHFTextField name="campaignName" label="Name" required />
               {/* <RHFTextField name="customerPhone" label="Phone Number" required /> */}
-              <RHFPhoneNumber name="customerPhone" label="Phone" />
-              <RHFTextField name="customerEmail" label="Email Address" required />
+              <RHFTextField name="tenure" label="Tenure" required />
             </Box>
             <ButtonAccordion title="Business Details" sx={boxGridSx}>
               <RHFTextField name="customerGST" label="GSTIN" />

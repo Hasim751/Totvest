@@ -75,7 +75,7 @@ export default function AboutWhat() {
           <Grid item xs={12} md={6} lg={5}>
             <m.div variants={varFade().inRight}>
               <Typography variant="h2" sx={{ mb: 3 }}>
-                What is minimal?
+                What is TotVest?
               </Typography>
             </m.div>
 
@@ -86,20 +86,17 @@ export default function AboutWhat() {
                     theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
               >
-                Our theme is the most advanced and user-friendly theme you will find on the market,
-                we have documentation and video to help set your site really easily, pre-installed
-                demos you can import in one click and everything from the theme options to page
-                content can be edited from the front-end. This is the theme you are looking for.
+                We aims to provide young and budding minds with an excellent opportunity
+                to ignite their entrepreneurial spark while also creating a central mobile-friendly
+                website and application for TotVest. By offering guidance, mentorship, and resources
+                through the website and application, we aim to equip young entrepreneurs with the
+                necessary skills and tools to become successful entrepreneurs. Our goal is to foster
+                a culture of innovation and creativity, empowering young minds to create businesses
+                that make a positive impact on their communities and the world.
               </Typography>
             </m.div>
 
-            <Box sx={{ my: 5 }}>
-              {_skills.map((progress) => (
-                <m.div key={progress.label} variants={varFade().inRight}>
-                  <ProgressItem progress={progress} />
-                </m.div>
-              ))}
-            </Box>
+          
 
             <m.div variants={varFade().inRight}>
               <Button
@@ -108,7 +105,7 @@ export default function AboutWhat() {
                 size="large"
                 endIcon={<Iconify icon="ic:round-arrow-right-alt" width={24} />}
               >
-                Check out our work
+                Check recently funded StartUps
               </Button>
             </m.div>
           </Grid>

@@ -54,13 +54,11 @@ export function CampaignForm() {
               <RHFTextField name="minSubscription" label="Min Subscription" required />
             </Box>
             <ButtonAccordion title="Business Details" sx={boxGridSx}>
-               <RHFTextField minRows={5}/>
+              <RHFTextField name="description" minRows={5} label="description" />
             </ButtonAccordion>
-          
+
             <Stack alignItems="flex-end" sx={{ mt: 3 }}>
-              <RHFSubmitButton onClick={handleSubmit(onSubmit)}>
-                Add
-              </RHFSubmitButton>
+              <RHFSubmitButton onClick={handleSubmit(onSubmit)}>Add</RHFSubmitButton>
             </Stack>
           </Card>
         </Grid>

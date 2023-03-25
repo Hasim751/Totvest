@@ -30,13 +30,13 @@ const StyledContent = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function AboutHero() {
+export default function StartupHero() {
   return (
     <StyledRoot>
       <Container component={MotionContainer}>
         <StyledContent>
           <TextAnimate
-            text="Who"
+            text="Startups"
             sx={{
               color: 'primary.main',
             }}
@@ -46,8 +46,7 @@ export default function AboutHero() {
           <br />
 
           <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
-            <TextAnimate text="we" />
-            <TextAnimate text="are?" />
+            
           </Stack>
 
           <m.div variants={varFade().inRight}>
@@ -59,8 +58,8 @@ export default function AboutHero() {
                 fontWeight: 'fontWeightMedium',
               }}
             >
-              About Us
-              <br />
+              Startup
+              <br /> find amazing startup to invest
             </Typography>
           </m.div>
         </StyledContent>

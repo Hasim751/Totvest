@@ -1,28 +1,28 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
 import { Divider } from '@mui/material';
-import { AboutHero, AboutTeam, AboutTestimonials, AboutVision, AboutWhat } from 'src/sections/about';
+import StartupHero from 'src/sections/startup/StartupHero';
+import StartupCard from 'src/sections/startup/StartupCard';
 // sections
 
 // ----------------------------------------------------------------------
 
-export default function AboutPage() {
+export default function StartUpPage() {
   return (
     <>
       <Helmet>
-        <title> About us | TotVest</title>
+        <title> StartUp | TotVest</title>
       </Helmet>
 
-      <AboutHero />
-
-      <AboutWhat />
-
+      <StartupHero />
+     <br/>
+      <StartupCard />
+     
 
       <Divider orientation="vertical" sx={{ my: 10, mx: 'auto', width: 2, height: 40 }} />
 
      
 
-      <AboutTestimonials />
     </>
   );
 }

@@ -1,10 +1,9 @@
 import axios from 'axios';
 // config
-import { HOST_API_KEY } from '../config';
 
 // ----------------------------------------------------------------------
 
-const axiosInstance = axios.create({ baseURL: HOST_API_KEY });
+const axiosInstance = axios.create({ baseURL: "http://localhost:3333/" });
 
 axiosInstance.interceptors.response.use(
   (response) => response,
@@ -12,7 +11,7 @@ axiosInstance.interceptors.response.use(
 );
 
 const api = axios.create({
-  baseURL: HOST_API_KEY,
+  baseURL: "http://localhost:3333/",
   headers: {
     'Content-Type': 'application/json',
   },
@@ -24,7 +23,7 @@ api.interceptors.response.use(
 );
 
 const privateApi = axios.create({
-  baseURL: HOST_API_KEY,
+  baseURL: "http://localhost:3333/",
   headers: {
     'Content-Type': 'application/json',
   },
