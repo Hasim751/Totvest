@@ -146,8 +146,7 @@ function Description() {
     <StyledDescription>
       <m.div variants={varFade().in}>
         <Typography variant="h2" sx={{ textAlign: 'center' }}>
-          Start a <br />
-          new project with
+          Where dreams become ventures
         </Typography>
       </m.div>
 
@@ -161,49 +160,20 @@ function Description() {
             repeat: Infinity,
           }}
         >
-          Minimal
+          TotVest
         </StyledGradientText>
       </m.div>
 
       <m.div variants={varFade().in}>
         <Typography variant="body2" sx={{ textAlign: 'center' }}>
-          The starting point for your next project is based on MUI.Easy customization Helps you
-          build apps faster and better.
+          Grow your wealth with higher returns.
         </Typography>
       </m.div>
 
       <m.div variants={varFade().in}>
         <Stack spacing={1.5} direction={{ xs: 'column-reverse', sm: 'row' }} sx={{ my: 5 }}>
           <Stack alignItems="center" spacing={2}>
-            <Button
-              to={PATH_DASHBOARD.root}
-              component={RouterLink}
-              color="inherit"
-              size="large"
-              variant="contained"
-              startIcon={<Iconify icon="eva:flash-fill" width={24} />}
-              sx={{
-                bgcolor: 'text.primary',
-                color: (theme) => (theme.palette.mode === 'light' ? 'common.white' : 'grey.800'),
-                '&:hover': {
-                  bgcolor: 'text.primary',
-                },
-              }}
-            >
-              Live Preview
-            </Button>
-
-            <Link
-              color="inherit"
-              variant="caption"
-              target="_blank"
-              rel="noopener"
-              href={"/demo"}
-              sx={{ textDecoration: 'underline', display: 'inline-flex', alignItems: 'center' }}
-            >
-              <Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />
-              try Free Demo
-            </Link>
+        
           </Stack>
 
           <Button
@@ -213,27 +183,15 @@ function Description() {
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
             target="_blank"
             rel="noopener"
-            href={"/register"}
+            href={'/register'}
             sx={{ borderColor: 'text.primary' }}
           >
-            Register
+            Register Now
           </Button>
         </Stack>
       </m.div>
 
-      <Stack spacing={3} sx={{ textAlign: 'center', opacity: 0.4 }}>
-        <m.div variants={varFade().in}>
-          <Typography variant="overline">Available For</Typography>
-        </m.div>
-
-        <Stack spacing={2} direction="row" justifyContent="center">
-          {['sketch', 'figma', 'js', 'ts', 'nextjs'].map((platform) => (
-            <m.div key={platform} variants={varFade().in}>
-              <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
-            </m.div>
-          ))}
-        </Stack>
-      </Stack>
+      
     </StyledDescription>
   );
 }

@@ -11,14 +11,14 @@ import { MotionViewport, varFade } from '../../components/animate';
 const CARDS = [
   {
     icon: ' /assets/icons/home/ic_make_brand.svg',
-    title: 'Branding',
-    description: 'Consistent design makes it easy to brand your own.',
+    title: 'Equity linked instruments',
+    description: 'Subscribe to gain access to exclusive high return opportunities in growing businesses',
   },
   {
     icon: ' /assets/icons/home/ic_design.svg',
-    title: 'UI & UX Design',
+    title: 'Fixed Income instruments',
     description:
-      'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
+      'Enjoy regular payouts with high yield investment opportunities.',
   },
   {
     icon: ' /assets/icons/home/ic_development.svg',
@@ -58,13 +58,13 @@ export default function HomeMinimal() {
         >
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-              Minimal UI
+              TotVest
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inDown}>
             <Typography variant="h2">
-              What minimal <br /> helps you?
+              What Totvest <br /> helps you?
             </Typography>
           </m.div>
         </Stack>
