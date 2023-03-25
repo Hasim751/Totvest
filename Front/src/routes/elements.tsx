@@ -33,6 +33,7 @@ export const Page500 = Loadable(lazy(() => import('../pages/public/Page500')));
 export const Page403 = Loadable(lazy(() => import('../pages/public/Page403')));
 export const Page404 = Loadable(lazy(() => import('../pages/public/Page404')));
 export const HomePage = Loadable(lazy(() => import('../pages/public/HomePage')));
+export const AboutPage = Loadable(lazy(() => import('../pages/public/AboutPage')));
 
 //Customer
  export const AddCustomer = Loadable(lazy(() => import('../pages/customer/AddCustomer')))

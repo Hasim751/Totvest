@@ -29,6 +29,7 @@ import {
 } from './elements';
 import UserProfile from 'src/pages/user/UserProfile';
 import Registration from 'src/pages/public/Registration';
+import AboutPage from 'src/pages/public/AboutPage';
 
 // ----------------------------------------------------------------------
 
@@ -51,6 +52,15 @@ export default function Router() {
           element: (
             <GuestGuard>
               <Registration />
+            </GuestGuard>
+          ),
+        },
+        
+        {
+          path: 'about',
+          element: (
+            <GuestGuard>
+              <AboutPage />
             </GuestGuard>
           ),
         },

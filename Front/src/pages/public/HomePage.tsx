@@ -65,21 +65,18 @@ export default function HomePage() {
       >
         <HomeMinimal />
 
-        <HomeHugePackElements />
-
-        <HomeForDesigner />
+        
+        {/* <HomeForDesigner />
 
         <HomeDarkMode />
 
         <HomeColorPresets />
 
         <HomeCleanInterfaces />
-
+ */}
         <HomePricingPlans />
 
-        <HomeLookingFor />
-
-        <HomeAdvertisement />
+       
       </Box>
     </>
   );
