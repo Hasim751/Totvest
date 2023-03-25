@@ -34,9 +34,9 @@ export function CampaignForm() {
 
   const onSubmit = async (data: Campaign) => {
     try {
-      const res = await addCampaign(FormData);
+      const res = await addCampaign(data);
       enqueueSnackbar(res.message, { variant: res.type });
-      navigate('/dashboard/customer/list');
+      navigate('/startup');
     } catch (error) {
       enqueueSnackbar(error.message, { variant: 'error' });
     }
@@ -49,12 +49,25 @@ export function CampaignForm() {
           <Card sx={{ p: 3 }}>
             <Box sx={boxGridSx}>
               <RHFTextField name="campaignName" label="Campaign Name" required />
-              {/* <RHFTextField name="customerPhone" label="Phone Number" required /> */}
-              <RHFPhoneNumber name="tenure" label="Tenure" />
+              <RHFTextField name="tenure" label="Tenure" />
               <RHFTextField name="minSubscription" label="Min Subscription" required />
             </Box>
-            <ButtonAccordion title="Business Details" sx={boxGridSx}>
-              <RHFTextField name="description" minRows={5} label="description" />
+            <ButtonAccordion
+              title="Add Details"
+              sx={{
+                display: 'grid',
+                columnGap: 2,
+                rowGap: 3,
+                gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)' },
+              }}
+            >
+              <RHFTextField
+                fullWidth
+                multiline
+                name="description"
+                minRows={5}
+                label="Description"
+              />
             </ButtonAccordion>
 
             <Stack alignItems="flex-end" sx={{ mt: 3 }}>

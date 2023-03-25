@@ -30,6 +30,17 @@ export class StartupService {
     };
   }
 
+  async getAllCampaign() {
+    return await this._campaignRepository.find({
+      select: [
+        'campaignId',
+        'campaignName',
+        'description',
+        'minSubscription',
+        "userId"
+      ],
+    });
+  }
 }
 
 

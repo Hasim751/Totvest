@@ -1,5 +1,5 @@
-import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
-import { GetUser } from '../auth/common/decorators';
+import { Body, Controller, Get, HttpCode, HttpStatus, Post } from '@nestjs/common';
+import { GetUser, Public } from '../auth/common/decorators';
 import { StartupService } from './startup.service';
 
 @Controller('startup')
@@ -8,8 +8,15 @@ export class StartupController {
 
   @HttpCode(HttpStatus.OK)
   @Post('/addCampaign')
-  register(@Body() campaign: any, @GetUser('sub') userId: string) {
+  addCampaign(@Body() campaign: any, @GetUser('sub') userId: string) {
     return this._startupServices.addCampaign(campaign,userId);
+  }
+
+  @HttpCode(HttpStatus.OK)
+  @Public()
+  @Get('/getAllCampaigns')
+  getAllCampaigns() {
+    return this._startupServices.getAllCampaign()
   }
 
 }
