@@ -178,9 +178,8 @@ function Description() {
             size="large"
             variant="outlined"
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
-            target="_blank"
             rel="noopener"
-            href={'/register'}
+            href={'/auth/register'}
             sx={{ borderColor: 'text.primary' }}
           >
             Register Now

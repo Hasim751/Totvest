@@ -65,19 +65,21 @@ export class AuthService {
   }
 
   async logout(userId: number) {
+    console.log(userId);
+    
     try {
-      const tenant = await this._userRepository.findOne({
+      const user = await this._userRepository.findOne({
         where: {
           id: userId,
           hashRt: Not(IsNull())
         }
       });
 
-      if (!tenant) {
+      if (!user) {
         throw new ForbiddenException('Invalid Action');
       }
-      tenant.hashRt = null;
-      await this._userRepository.save(tenant);
+      user.hashRt = null;
+      await this._userRepository.save(user);
       return { status: true }
     } catch (error) {
       return error
