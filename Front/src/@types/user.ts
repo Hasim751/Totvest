@@ -287,3 +287,21 @@ export type IUserAccountNotificationSettings = {
   applicationProduct: boolean;
   applicationBlog: boolean;
 };
+export type Campaign = {
+  campaignName: string;
+  tenure: string;
+  investmentType: string;
+  dealType: string;
+  discount: string;
+  minSubscription: string;
+  target: string;
+  endDate: Date;
+  docs?: string;
+  returnRate?: string | null;
+  video?: string | null;
+  subscribers: string | null;
+  subscriptionDays: string | null;
+  capitalToRaise?: string | null;
+  subscriptionOffered?: string | null;
+  highlights?: string | null;
+}

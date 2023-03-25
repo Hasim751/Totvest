@@ -53,6 +53,11 @@ export const PATH_DASHBOARD = {
     add: path(ROOTS_DASHBOARD, '/customer/add'),
     list: path(ROOTS_DASHBOARD, '/customer/list'),
   },
+  campaign: {
+    root: path(ROOTS_DASHBOARD, '/campaign'),
+    add: path(ROOTS_DASHBOARD, '/campaign/add'),
+    list: path(ROOTS_DASHBOARD, '/campaign/list'),
+  },
   product: {
     add: path(ROOTS_DASHBOARD, '/product/add'),
     list: path(ROOTS_DASHBOARD, '/product/list'),

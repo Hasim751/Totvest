@@ -2,7 +2,7 @@ import { m, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 // @mui
 import { styled, alpha, useTheme } from '@mui/material/styles';
-import { Button, Box, Link, Container, Typography, Stack, Grid } from '@mui/material';
+import { Button, Box, Container, Typography, Stack, Grid } from '@mui/material';
 // routes
 // hooks
 import useResponsive from '../../hooks/general/useResponsive';
@@ -169,9 +169,7 @@ function Description() {
 
       <m.div variants={varFade().in}>
         <Stack spacing={1.5} direction={{ xs: 'column-reverse', sm: 'row' }} sx={{ my: 5 }}>
-          <Stack alignItems="center" spacing={2}>
-        
-          </Stack>
+          <Stack alignItems="center" spacing={2}></Stack>
 
           <Button
             color="inherit"
@@ -179,15 +177,13 @@ function Description() {
             variant="outlined"
             startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
             rel="noopener"
-            href={'/auth/register'}
+            href={'/register'}
             sx={{ borderColor: 'text.primary' }}
           >
             Register Now
           </Button>
         </Stack>
       </m.div>
-
-      
     </StyledDescription>
   );
 }

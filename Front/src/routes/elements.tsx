@@ -40,3 +40,6 @@ export const AddCustomer = Loadable(lazy(() => import('../pages/customer/AddCust
 export const CustomerList = Loadable(lazy(() => import('../pages/customer/CustomerList')));
 
 // ----------------------------------------------------------------------
+
+export const AddCampaign = Loadable(lazy(() => import('../pages/campaign/AddCampaign')))
+
