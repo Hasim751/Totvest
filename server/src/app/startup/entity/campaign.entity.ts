@@ -17,10 +17,10 @@ export class CampaignEntity {
   @Column({ type: 'text' })
   tenure: string;
 
-  @Column()
+  @Column({nullable : true})
   investmentType: string;
 
-  @Column()
+  @Column({nullable : true})
   dealType: string;
 
   @Column({nullable : true})

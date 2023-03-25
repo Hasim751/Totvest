@@ -1,14 +1,15 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Post } from '@nestjs/common';
+import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
+import { GetUser } from '../auth/common/decorators';
 import { StartupService } from './startup.service';
 
 @Controller('startup')
-export class startupController {
+export class StartupController {
   constructor(private _startupServices: StartupService ) {}
 
-  // @HttpCode(HttpStatus.OK)
-  // @Get('/addCampaign')
-  // register(@Body() user: UserDto) {
-  //   return this._startupServices.addCampaign(user);
-  // }
+  @HttpCode(HttpStatus.OK)
+  @Post('/addCampaign')
+  register(@Body() campaign: any, @GetUser('sub') userId: string) {
+    return this._startupServices.addCampaign(campaign,userId);
+  }
 
 }
