@@ -36,9 +36,7 @@ export const HomePage = Loadable(lazy(() => import('../pages/public/HomePage')))
 export const AboutPage = Loadable(lazy(() => import('../pages/public/AboutPage')));
 
 //Customer
- export const AddCustomer = Loadable(lazy(() => import('../pages/customer/AddCustomer')))
- export const CustomerList = Loadable(lazy(() => import('../pages/customer/CustomerList')))
+export const AddCustomer = Loadable(lazy(() => import('../pages/customer/AddCustomer')));
+export const CustomerList = Loadable(lazy(() => import('../pages/customer/CustomerList')));
 
 // ----------------------------------------------------------------------
-
-

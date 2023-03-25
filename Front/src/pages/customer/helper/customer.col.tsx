@@ -1,8 +1,9 @@
 import { RTCheckBox } from '../../../mycomponents/react-table/components/RTCheckBox';
 import { ColumnDef } from '@tanstack/react-table';
-import { Customer } from '../../../@types/customer';
+
 import { RTActions } from 'src/mycomponents/react-table/components/RTActions';
 import { CustomerActions } from '../components/CustomerAction';
+import { Customer } from 'src/@types/customer';
 
 export const customerCols: ColumnDef<Customer, any>[] = [
   {

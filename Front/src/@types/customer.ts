@@ -6,12 +6,21 @@ export type Customer = {
   customerId: string;
   customerCategory: string;
   customerName: string;
-  customerPhone: string;
-  customerWhatsapp: string;
-  customerBusinessName: string;
-  customerEmail: string;
-  customerGST: string;
-  customerPAN: string;
+  tenure : string;
+  investmentType : string;
+  dealType : string;
+  discount: number;
+  minSubscription : number;
+  target : number;
+  enddate : string;
+  docs: string;
+  returnRate: string;
+  video : string;
+  subscribers : number;
+  subscribtionDays : number;
+  captialToRaise : number;
+  subscriptionOffered : number;
+
   status: boolean
 }
 

@@ -47,13 +47,7 @@ export const useCustomer = () => {
 
   const defaultCustomer = (customer: CustForm | undefined) => ({
     customerName: customer?.customerName || '',
-    customerPhone: customer?.customerPhone || '',
-    customerEmail: customer?.customerEmail || '',
-    customerCategory: customer?.customerCategory || '',
-    customerWhatsapp: customer?.customerWhatsapp || '',
-    customerBusinessName: customer?.customerBusinessName || '',
-    customerGST: customer?.customerGST || '',
-    customerPAN: customer?.customerPAN || '',
+    
   })
 
   const queryClient = useQueryClient()

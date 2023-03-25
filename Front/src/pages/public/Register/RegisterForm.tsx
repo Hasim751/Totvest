@@ -5,7 +5,6 @@ import { HookForm, RHFTextField } from 'src/components/hook-form';
 import { RHFPhoneNumber } from 'src/components/hook-form/RHFPhoneNumber';
 import { RHFSubmitButton } from 'src/components/hook-form/RHFSubmitButton';
 import { ButtonAccordion } from 'src/mycomponents/common';
-import { AddressRow } from 'src/pages/customer/components/AddressRow';
 import { boxGridSx } from 'src/utils/CommonSX';
 
 type Props = {};

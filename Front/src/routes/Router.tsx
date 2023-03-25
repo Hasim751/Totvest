@@ -30,6 +30,7 @@ import {
 import UserProfile from 'src/pages/user/UserProfile';
 import Registration from 'src/pages/public/Registration';
 import AboutPage from 'src/pages/public/AboutPage';
+import StartUpPage from 'src/pages/public/StartUpPage';
 
 // ----------------------------------------------------------------------
 
@@ -114,6 +115,7 @@ export default function Router() {
         { element: <HomePage />, index: true },
         { element: <RegisterPage />, path:"register" },
         { element: <AboutPage />, path:"about" },
+        { element: <StartUpPage />, path:"startup" },
         // Demo Components
       ],
     },
