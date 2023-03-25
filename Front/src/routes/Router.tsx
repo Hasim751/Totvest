@@ -121,7 +121,7 @@ export default function Router() {
       element: <MainLayout />,
       children: [
         { element: <HomePage />, index: true },
-        { element: <RegisterPage />, path:"register" },
+        { element: <Registration />, path:"register" },
         { element: <AboutPage />, path:"about" },
         { element: <StartUpPage />, path:"startup" },
         // Demo Components

@@ -15,11 +15,15 @@ export const useUser = () => {
     
     return Promise.resolve(data as NestCommonRes)
   }
+  const getAllCampaigns = async () => {
+    const { data } = await privateApi.get('/startup/getAllCampaigns');
+    return Promise.resolve(data as Customer[]);
+  }
   const addCampaign = async (formData: any) => {
-    const { data } = await privateApi.post("/auth/register", formData);
+    const { data } = await privateApi.post("/startup/addCampaign", formData);
     
     return Promise.resolve(data as NestCommonRes)
   }
 
-  return { createUser, addCampaign }
+  return { createUser, addCampaign, getAllCampaigns }
 }

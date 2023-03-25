@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { startupController } from './startup.controller';
+import { CampaignEntity } from './entity/campaign.entity';
+import { StartupController } from './startup.controller';
 import { StartupService } from './startup.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([])],
+  imports: [TypeOrmModule.forFeature([CampaignEntity])],
   providers: [StartupService],
-  controllers: [startupController]
+  controllers: [StartupController]
 })
 export class StartupModule { }
